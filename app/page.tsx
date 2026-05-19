@@ -15,28 +15,28 @@ import Footer from '@/components/footer'
 gsap.registerPlugin(ScrollTrigger)
 
 const products = [
-  { name: 'The Heritage Collection', price: '$2,400', image: '/images/product-1.jpg' },
+  { name: 'Aurelia Hoops', price: '$2,400', image: '/images/product-1.jpg' },
   { name: 'Midnight Noir', price: '$1,800', image: '/images/product-2.jpg' },
-  { name: 'Atelier Rouge', price: '$3,200', image: '/images/product-3.jpg' },
+  { name: 'Atelier Rose', price: '$3,200', image: '/images/product-3.jpg' },
   { name: 'Riviera Gold', price: '$2,100', image: '/images/product-4.jpg' },
   { name: 'Maison Blanche', price: '$2,800', image: '/images/product-5.jpg' },
 ]
 
 const storyImages = [
-  { src: '/images/story-1.jpg', alt: 'Craftsmanship', caption: 'Every piece begins with intention — hand-selected materials meet centuries of technique.' },
-  { src: '/images/story-2.jpg', alt: 'Materials', caption: 'Sourced from the finest ateliers across Europe, each material tells its own story.' },
-  { src: '/images/story-3.jpg', alt: 'Heritage', caption: 'A legacy spanning generations, carried forward with unwavering devotion to craft.' },
+  { src: '/images/story-1.jpg', alt: 'Layered gold necklaces', caption: 'Every piece begins with intention — hand-selected materials meet centuries of technique.' },
+  { src: '/images/story-2.jpg', alt: 'Gold earrings on marble', caption: 'Sourced from the finest ateliers across Europe, each material tells its own story.' },
+  { src: '/images/story-3.jpg', alt: 'Artisan applying finishing oils', caption: 'A legacy spanning generations, carried forward with unwavering devotion to craft.' },
 ]
 
 const galleryImages = [
-  { src: '/images/gallery-1.jpg', alt: 'Detail shot', aspect: 'portrait' as const },
-  { src: '/images/gallery-2.jpg', alt: 'Lifestyle', aspect: 'landscape' as const },
-  { src: '/images/gallery-3.jpg', alt: 'Product close-up', aspect: 'portrait' as const },
-  { src: '/images/gallery-4.jpg', alt: 'Editorial', aspect: 'landscape' as const },
-  { src: '/images/gallery-5.jpg', alt: 'Texture', aspect: 'square' as const },
-  { src: '/images/gallery-6.jpg', alt: 'Craftsmanship', aspect: 'portrait' as const },
-  { src: '/images/gallery-7.jpg', alt: 'Atmosphere', aspect: 'landscape' as const },
-  { src: '/images/gallery-8.jpg', alt: 'Collection', aspect: 'portrait' as const },
+  { src: '/images/gallery-1.jpg', alt: 'Gold pendant necklace detail', aspect: 'portrait' as const },
+  { src: '/images/gallery-2.jpg', alt: 'Gold bangle collection', aspect: 'landscape' as const },
+  { src: '/images/gallery-3.jpg', alt: 'Rose gold gemstone ring', aspect: 'portrait' as const },
+  { src: '/images/gallery-4.jpg', alt: 'Diamond ring on dark velvet', aspect: 'landscape' as const },
+  { src: '/images/gallery-5.jpg', alt: 'Ornate gold necklace set', aspect: 'square' as const },
+  { src: '/images/gallery-6.jpg', alt: 'Crystal bracelet detail', aspect: 'portrait' as const },
+  { src: '/images/gallery-7.jpg', alt: 'Luxury timepiece', aspect: 'landscape' as const },
+  { src: '/images/gallery-8.jpg', alt: 'Pearl necklace in velvet box', aspect: 'portrait' as const },
 ]
 
 export default function Home() {
@@ -157,7 +157,7 @@ export default function Home() {
           {products.map((product) => (
             <div
               key={product.name}
-              className="flex-shrink-0 w-[80vw] md:w-[40vw] lg:w-[28vw]"
+              className="w-full md:flex-shrink-0 md:w-[40vw] lg:w-[28vw]"
               data-cursor="View"
             >
               <div className="relative aspect-[3/4] overflow-hidden">

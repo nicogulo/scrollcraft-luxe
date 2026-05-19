@@ -48,8 +48,10 @@ body::after {
   background-size: 200px 200px;
 }
 
-* {
-  cursor: none;
+@media (pointer: fine) {
+  * {
+    cursor: none;
+  }
 }
 
 .font-display {

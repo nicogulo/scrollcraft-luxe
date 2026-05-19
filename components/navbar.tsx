@@ -72,7 +72,7 @@ export default function Navbar() {
           </div>
 
           <button
-            className="md:hidden relative w-8 h-8 flex items-center justify-center"
+            className="md:hidden relative w-11 h-11 flex items-center justify-center"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           >
@@ -111,7 +111,7 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="font-display text-4xl text-[#1C1917] hover:text-[#D4A574] transition-colors duration-400"
+                    className="font-display text-4xl text-[#1C1917] hover:text-[#D4A574] transition-colors duration-400 py-2 px-4 inline-block"
                     onClick={() => setMenuOpen(false)}
                   >
                     {link.label}
