@@ -1,0 +1,75 @@
+@import "lenis/dist/lenis.css";
+@import "tailwindcss";
+
+:root {
+  --background: #FAFAF9;
+  --foreground: #1C1917;
+  --accent-gold: #D4A574;
+  --accent-gold-dark: #B8956A;
+  --text-primary: #1C1917;
+  --text-secondary: #57534E;
+  --text-muted: #78716C;
+  --text-tertiary: #A8A29E;
+  --border-subtle: #D6D3D1;
+  --surface-card: #FFFFFF;
+  --surface-elevated: rgba(28, 25, 23, 0.03);
+  --noise-texture: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+  --animate-marquee: marquee 28s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 28s linear infinite;
+}
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  background: #FAFAF9;
+  color: #1C1917;
+  font-family: var(--font-sans), 'Inter', system-ui, sans-serif;
+  overflow-x: clip;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0.02;
+  background-image: var(--noise-texture);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+* {
+  cursor: none;
+}
+
+.font-display {
+  font-family: var(--font-display), 'Playfair Display', Georgia, serif;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
